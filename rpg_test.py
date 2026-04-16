@@ -34,3 +34,15 @@ def test_heal_alive_character():
 
     assert knight.hp == 800
     assert knight.alive == True
+
+def test_heal_dead_character():
+    knight = Character()
+    healer = Character()
+
+    knight.hp = 0
+    knight.alive = False
+
+    healer.heal(knight, 300)
+
+    assert knight.hp == 0
+    assert knight.alive == False
