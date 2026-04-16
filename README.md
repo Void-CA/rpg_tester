@@ -76,4 +76,5 @@ El código final de la clase "Character" no tiene dependencias externas ni códi
 **Si en el próximo parche del juego el diseñador decide que los personajes nacen con 2000 HP en lugar de 1000, ¿qué es lo primero que deben modificar?**
 Lo primero que se debe modificar es el valor de la variable "max_hp" en la clase "Character", ya que esta variable define el HP máximo que un personaje puede tener. Cambiar este valor a 2000 asegurará que los personajes nazcan con 2000 HP en lugar de 1000. Pero esto deberia reflejarse tambien en los tests escritos.
 
-![alt text](passed_tests.png)
+## Resultados de las pruebas unitarias
+Todas las pruebas unitarias se ejecutaron correctamente, lo que indica que los métodos de la clase "Character" funcionan según lo esperado. 
