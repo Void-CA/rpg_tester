@@ -5,7 +5,7 @@ def test_spawn():
 
     assert hero.hp == 1000
     assert hero.lvl == 1
-    assert hero.state == 'alive'
+    assert hero.alive == True
 
 def test_survive_attack():
     hero = Character()
@@ -14,7 +14,7 @@ def test_survive_attack():
     hero.attack(monster, 200)
 
     assert monster.hp == 800
-    assert monster.state == 'alive'
+    assert monster.alive == True
 
 def test_die_from_attack():
     hero = Character()
@@ -23,7 +23,7 @@ def test_die_from_attack():
     hero.attack(monster, 1200)
 
     assert monster.hp == 0
-    assert monster.state == 'dead'
+    assert monster.alive == False
 
 def test_heal_alive_character():
     knight = Character()
@@ -33,4 +33,4 @@ def test_heal_alive_character():
     healer.heal(knight, 300)
 
     assert knight.hp == 800
-    assert knight.state == 'alive'
+    assert knight.alive == True

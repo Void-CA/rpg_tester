@@ -3,23 +3,23 @@ class Character:
     def __init__(self):
         self.hp = self.max_hp
         self.lvl = 1
-        self.state = 'alive'
+        self.alive = True
 
 
     def attack(self,  target, damage):
-        if self.state == 'dead':
+        if self.alive == False:
             return
         
         target.hp -= damage
         if target.hp <= 0:
-            target.state = 'dead'
+            target.alive = False
             target.hp = 0
 
     def heal(self, target, heal_amount):
-        if self.state == 'dead':
+        if self.alive == False:
             return
         
-        if target.state == 'dead':
+        if target.alive == False:
             return
         
         target.hp += heal_amount
