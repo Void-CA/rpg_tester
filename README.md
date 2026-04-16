@@ -78,3 +78,5 @@ Lo primero que se debe modificar es el valor de la variable "max_hp" en la clase
 
 ## Resultados de las pruebas unitarias
 Todas las pruebas unitarias se ejecutaron correctamente, lo que indica que los métodos de la clase "Character" funcionan según lo esperado. 
+
+![Resultados de las pruebas unitarias](passed_tests.png)
